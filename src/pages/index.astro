@@ -1,0 +1,58 @@
+---
+const description = "A free, non-destructive, cross-platform raw photo editor.";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Apertrust</title>
+  </head>
+  <body>
+    <main>
+      <h1><img src="/logo.svg" alt="Apertrust" width="1431" height="156" /></h1>
+      <p>See you soon</p>
+    </main>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    background: #ffffff;
+    color: #3a3a3a;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+
+  main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    margin: 0;
+    line-height: 0;
+  }
+
+  img {
+    width: min(480px, 80vw);
+    height: auto;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+</style>
