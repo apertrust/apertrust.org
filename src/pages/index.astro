@@ -1,4 +1,9 @@
 ---
+import "@fontsource-variable/fraunces/full.css";
+import "@fontsource-variable/fraunces/full-italic.css";
+import "@fontsource/dm-mono/400.css";
+import "@fontsource/caveat/700.css";
+
 const description = "A free, non-destructive, cross-platform raw photo editor.";
 ---
 
@@ -8,25 +13,58 @@ const description = "A free, non-destructive, cross-platform raw photo editor.";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#F4EEE2" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>Apertrust</title>
   </head>
   <body>
     <main>
       <h1><img src="/logo.svg" alt="Apertrust" width="298" height="70" /></h1>
-      <p>See you soon</p>
+      <p class="soon">See you soon</p>
+      <p class="what">{description}</p>
+      <div class="open">
+        <span class="note" aria-hidden="true">being built in the open ↓</span>
+        <a href="https://github.com/apertrust/apertrust">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            ><path
+              d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"
+            ></path></svg
+          >
+          github.com/apertrust
+        </a>
+      </div>
     </main>
   </body>
 </html>
 
 <style>
+  /* The website's colours and type: paper, ink, the slider marker's amber; Fraunces, DM Mono
+     and Caveat, self-hosted. */
+  :root {
+    --paper: #f4eee2;
+    --ink: #1e1a16;
+    --ink-soft: #5c5348;
+    --amber: #d66a20;
+    --amber-deep: #a15717;
+  }
+
   html,
   body {
     margin: 0;
     height: 100%;
-    background: #ffffff;
-    color: #3a3a3a;
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Fraunces Variable", Georgia, serif;
+    font-variation-settings: "SOFT" 50;
   }
 
   main {
@@ -35,9 +73,10 @@ const description = "A free, non-destructive, cross-platform raw photo editor.";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    padding: 0 16px;
+    gap: clamp(1.6rem, 4vw, 2.1rem);
+    padding: 3rem 16px;
     box-sizing: border-box;
+    text-align: center;
   }
 
   h1 {
@@ -45,14 +84,69 @@ const description = "A free, non-destructive, cross-platform raw photo editor.";
     line-height: 0;
   }
 
-  img {
-    width: min(360px, 80vw);
+  h1 img {
+    width: min(440px, 82vw);
     height: auto;
   }
 
-  p {
+  .soon {
     margin: 0;
-    font-size: 1.25rem;
-    letter-spacing: 0.02em;
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-variation-settings:
+      "SOFT" 100,
+      "WONK" 1;
+  }
+
+  .what {
+    margin: 0;
+    max-width: 34ch;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: clamp(0.875rem, 1.6vw, 1.0625rem);
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+
+  .open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .note {
+    font-family: "Caveat", cursive;
+    font-size: clamp(1.625rem, 3vw, 2.125rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--amber-deep);
+    transform: rotate(-3deg);
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 46px;
+    box-sizing: border-box;
+    padding: 0 22px;
+    border-radius: 23px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 0.9375rem;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background: var(--amber-deep);
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
   }
 </style>

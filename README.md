@@ -2,7 +2,7 @@
 
 Apertrust's website, [apertrust.org](https://apertrust.org), built with [Astro](https://astro.build) and published on GitHub Pages.
 
-For now it is a placeholder: the logo and "See you soon".
+For now it is a placeholder in the website's colours and type: the logo, "See you soon", what Apertrust is, and a link to its source.
 
 ## Working on it
 
@@ -18,3 +18,4 @@ Every push to `main` builds the site and publishes it (`.github/workflows/deploy
 
 - The site's code is under the MIT licence ([LICENSE](LICENSE)).
 - Its content, the text and images, is under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) ([LICENSE-CONTENT](LICENSE-CONTENT)).
+- The fonts, Fraunces, DM Mono and Caveat, are under the SIL Open Font Licence 1.1, installed from Fontsource's packages and served with the site.
