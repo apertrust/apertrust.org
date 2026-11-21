@@ -4,6 +4,8 @@ Apertrust's website, [apertrust.org](https://apertrust.org), built with [Astro](
 
 For now it is a placeholder in the website's colours and type: the logo, "See you soon", what Apertrust is, and a link to its source.
 
+The custom error page in `src/pages/404.astro` builds to `dist/404.html`, which GitHub Pages serves for missing pages.
+
 ## Working on it
 
 ```sh
