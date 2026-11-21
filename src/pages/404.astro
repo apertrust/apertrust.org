@@ -1,0 +1,127 @@
+---
+import "@fontsource-variable/fraunces/full.css";
+import "@fontsource-variable/fraunces/full-italic.css";
+import "@fontsource/dm-mono/400.css";
+---
+
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#F4EEE2" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Page not found · Apertrust</title>
+  </head>
+  <body>
+    <main>
+      <img class="logo" src="/logo.svg" alt="Apertrust" width="298" height="70" />
+      <div class="message">
+        <p class="code">404</p>
+        <h1>Page not found</h1>
+        <p class="what">The page you’re looking for may have moved, or the link may be incorrect.</p>
+      </div>
+      <a href="/">Back to the home page</a>
+    </main>
+  </body>
+</html>
+
+<style>
+  :root {
+    --paper: #f4eee2;
+    --ink: #1e1a16;
+    --ink-soft: #5c5348;
+    --amber: #d66a20;
+    --amber-deep: #a15717;
+  }
+
+  html,
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Fraunces Variable", Georgia, serif;
+    font-variation-settings: "SOFT" 50;
+  }
+
+  main {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(1.6rem, 4vw, 2.1rem);
+    padding: 3rem 16px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .logo {
+    width: min(440px, 82vw);
+    height: auto;
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .code,
+  h1,
+  .what {
+    margin: 0;
+  }
+
+  .code {
+    color: var(--amber-deep);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 6vw, 4rem);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+  }
+
+  .what {
+    max-width: 38ch;
+    color: var(--ink-soft);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: clamp(0.875rem, 1.6vw, 1.0625rem);
+    line-height: 1.5;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    box-sizing: border-box;
+    padding: 0.75rem 22px;
+    border-radius: 23px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 0.9375rem;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background: var(--amber-deep);
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--amber);
+    outline-offset: 3px;
+  }
+</style>
